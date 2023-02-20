@@ -56,7 +56,7 @@ const App = () => {
         <nav>
           <ul>
             <li><a href="/" role="button">View All Creators</a></li>
-            <li><a href="/new" role="button" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Add a Creator</a></li>
+            <li><a href="/new" role="button">Add a Creator</a></li>
           </ul>
         </nav>
       </header>
