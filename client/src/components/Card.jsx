@@ -24,22 +24,22 @@ const Card = (props) =>  {
         <div className="card-header-name">
           <h3>{props.name}</h3>
 
-          {props.youtube !== null ? (
+          {props.youtube !== null && props.youtube !== '' ? (
             <span className="fa-brands fa-youtube" onClick={goToYouTube}></span>
           ) : "" }
 
-          {props.twitter !== null ? (
+          {props.twitter !== null && props.twitter !== '' ? (
             <span className="fa-brands fa-twitter" onClick={goToTwitter}></span>
           ) : "" }
 
-          {props.instagram !== null ? (
+          {props.instagram !== null && props.instagram !== '' ? (
             <span className="fa-brands fa-instagram" onClick={goToInstagram}></span>
           ) : "" }
         </div>
 
         <div className="card-header-edit">
-          <Link to={'/' + props.id}><i className="fa-solid fa-circle-info"></i></Link>
-          <Link to={'/edit/' + props.id}><i className="fa-solid fa-pen"></i></Link>
+          <Link to={'/' + props.id} onClick={() => window.scrollTo({top: 600, behavior: 'smooth'})}><i className="fa-solid fa-circle-info"></i></Link>
+          <Link to={'/edit/' + props.id} onClick={() => window.scrollTo({top: 600, behavior: 'smooth'})}><i className="fa-solid fa-pen"></i></Link>
         </div>
 
         <div className="card-description">

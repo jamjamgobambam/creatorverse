@@ -49,21 +49,21 @@ const ViewCreator = ({data}) => {
                 <h2>{creator.name}</h2>
                 <p>{creator.description}</p>
 
-                {creator.youtube !== null ? (
+                {creator.youtube !== null && creator.youtube !== '' ? (
                     <button className="social-button" onClick={goToYouTube}><i className="fa-brands fa-youtube"></i>@{creator.youtube}</button>
                 ) : "" }
 
-                {creator.twitter !== null ? (
+                {creator.twitter !== null && creator.twitter !== '' ? (
                     <button className="social-button" onClick={goToTwitter}><i className="fa-brands fa-twitter"></i>@{creator.twitter}</button>
                 ) : "" }
 
-                {creator.instagram !== null ? (
+                {creator.instagram !== null && creator.instagram !== '' ? (
                     <button className="social-button" onClick={goToInstagram}><i className="fa-brands fa-instagram"></i>@{creator.instagram}</button>
                 ) : "" }
             </section>
 
             <section className="modify-creator">
-                <Link to={'/edit/' + creator.id}><button>Edit</button></Link>
+                <Link to={'/edit/' + creator.id}><button onClick={() => window.scrollTo({top: 600, behavior: 'smooth'})}>Edit</button></Link>
                 <button onClick={deleteCreator} className="delete-button">Delete</button>
             </section>
             

@@ -4,6 +4,7 @@
   font-family: Poppins, Verdana, sans-serif;
   --border-width: 2px;
   --border-radius: 0.3rem;
+  background-color: rgb(0, 6, 13);
 }
 
 [data-theme=light],
@@ -274,7 +275,7 @@ input[type=reset]:is([aria-current], :hover, :active, :focus),
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
+  grid-column-gap: 3rem;
   width: 70%;
 }
 
